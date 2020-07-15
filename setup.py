@@ -26,7 +26,7 @@ __dir__ = path.dirname(path.abspath(__file__))
 
 # Manually import the version number so dependencies don't need to be installed
 # when running setup.py
-version_file = path.join(__dir__, "sphinxcontrib_verilog_diagrams", "version.py")
+version_file = path.join(__dir__, "sphinxcontrib_verilog_diagrams_compat", "version.py")
 if path.exists(version_file):
     exec(open(version_file).read())
 else:
@@ -46,10 +46,11 @@ install_requires = [
     'setuptools',
     'docutils',
     'sphinx',
+    'sphinxcontrib-verilog-diagrams'
 ]
 
 setup(
-    name='sphinxcontrib-verilog-diagrams',
+    name='sphinxcontrib-verilog-diagrams-compat',
     version=__version__,
     description='Generate diagrams from Verilog in Sphinx.',
     long_description=readme,
